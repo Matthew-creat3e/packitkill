@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07090a">
+<title>PACKETKILL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+  <aside id="rail" aria-label="Main navigation">
+    <div class="brand"><span class="glyph">▶_</span><span>PACKET<b>KILL</b></span></div>
+    <div class="op-mini" id="opMini"></div>
+    <nav id="railNav"></nav>
+    <button class="cy-launch" data-cypher="open"><span class="cy-dot"></span>ASK CYPHER</button>
+    <button class="sync" id="sync" data-cypher="settings" title="Backup or restore your progress"><i></i><span>Saved on this device</span></button>
+  </aside>
+
+  <header id="topbar">
+    <div class="brand"><span class="glyph">▶_</span><span>PACKET<b>KILL</b></span></div>
+    <div class="tb-right"><div class="tb-rank" id="tbRank"></div><button class="cy-btn" data-cypher="open" aria-label="Ask CYPHER"><span class="cy-dot"></span></button></div>
+    <div class="tb-xp"><b id="tbXp"></b></div>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <nav id="tabbar" aria-label="Main navigation"></nav>
+
+  <section id="cypher" aria-label="CYPHER tutor" aria-hidden="true">
+    <div class="cy-head">
+      <div><div class="cy-name"><span class="cy-dot"></span>CYPHER <span class="cy-st off" id="cyCtxState">○ offline</span></div><div class="cy-sub" id="cyCtx">Direct line open</div></div>
+      <div class="row" style="gap:6px"><button class="icon-btn" data-cypher="settings" aria-label="CYPHER settings and backup">⚙</button><button class="icon-btn" data-cypher="close" aria-label="Close CYPHER">✕</button></div>
+    </div>
+    <div class="cy-set panel" id="cySet" hidden></div>
+    <div class="cy-log" id="cyLog" aria-live="polite"></div>
+    <div class="cy-quick" id="cyQuick"></div>
+    <form class="cy-form" id="cyForm" autocomplete="off">
+      <textarea id="cyIn" rows="2" placeholder="Ask about anything you're working on…" aria-label="Message CYPHER"></textarea>
+      <button class="btn gold" type="submit">SEND</button>
+    </form>
+    <div class="cy-off" id="cyOff">CYPHER runs on your own Ollama. It's offline right now: turn on Mindful, then tap ⚙ to connect.</div>
+  </section>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <div id="fx" aria-hidden="true"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="js/shim.js"></script>
+<script src="js/legacy-viz.js"></script>
+<script src="js/legacy-content.js"></script>
+<script src="js/legacy-engines.js"></script>
+<script src="js/data-secplus.js"></script>
+<script src="js/data-new.js"></script>
+<script src="js/core.js"></script>
+<script src="js/data-subtopics.js"></script>
+<script src="js/bank.js"></script>
+<script src="js/widgets.js"></script>
+<script src="js/terminals.js"></script>
+<script src="js/python.js"></script>
+<script src="js/ide.js"></script>
+<script src="js/views.js"></script>
+<script src="js/labs.js"></script>
+</body>
+</html>
